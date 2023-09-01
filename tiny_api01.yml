@@ -1,0 +1,19 @@
+openapi: 3.0.3
+info:
+  title: TinyTest
+  version: "1.0"
+paths:
+  /tinyendpoint:
+    get:
+      parameters:
+        - name: p
+          in: query
+          required: true
+          schema:
+            type: string
+          example: "Friday"  
+      responses:
+        '200':
+          description: Successful operation       
+        '400':
+          description: Application error
